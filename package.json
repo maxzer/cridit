@@ -4,7 +4,8 @@
   "description": "My template",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/maxzer/cridit/issues"
   },
-  "homepage": "https://github.com/maxzer/cridit#readme"
+  "homepage": "https://github.com/maxzer/cridit#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.5",
+    "path": "^0.12.7",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {}
 }
