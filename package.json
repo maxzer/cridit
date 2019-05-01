@@ -1,0 +1,19 @@
+{
+  "name": "credit",
+  "version": "1.0.0",
+  "description": "My template",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxzer/cridit.git"
+  },
+  "author": "maxim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxzer/cridit/issues"
+  },
+  "homepage": "https://github.com/maxzer/cridit#readme"
+}
