@@ -1,0 +1,23 @@
+{
+  "name": "credit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/maxzer/cridit.git"
+  },
+  "keywords": [
+    "javascript",
+    "js"
+  ],
+  "author": "maxim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxzer/cridit/issues"
+  },
+  "homepage": "https://github.com/maxzer/cridit#readme"
+}
