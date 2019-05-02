@@ -88,3 +88,9 @@ section, .section {
 }
 
 @import "modules/wrapper.scss";
+
+h1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
