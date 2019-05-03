@@ -59,12 +59,10 @@ ul, li {
   display: flex;
 
   &__left-menu {
-    background-color: green;
     width: 33%;
     height: 375px;
 
     &__list {
-      background-color: red;
     }
     &__item {
       color: white;
@@ -73,7 +71,7 @@ ul, li {
       height: 75px;
       line-height: 4;
       padding-left: 30px;
-      border-bottom: 1px solid #20232b;
+      border-top: 1px solid #20232b;
       cursor: pointer;
 
       &_dark{
@@ -84,13 +82,115 @@ ul, li {
         background-color: #191c24;
       }
     }
+    &__item:hover {
+      background-color: #2a2d37;
+      color: #808592;
+    }
   }
 
   &__card {
     background-color: #f7f8f8;
     height: 100%;
     width: 67%;
+    padding-top: 45px;
+    padding-left: 30px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+
+      &__text {
+        display: inherit;
+        color: #8494ab;
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        .number-card {
+          margin: 0px;
+          padding-left: 60px;
+        }
+
+        .cash {
+          margin: 0px;
+          padding-left: 35px;
+        }
+
+      }
+    }
+
+    &__card-data {
+
+      h1 {
+        font-size: 22px;
+        padding-bottom: 20px;
+        padding-top: 5px;
+      }
+
+      .bank-front {
+        width: 350px;
+        height: 235px;
+        border-radius: 10px;
+        border: 1px solid #e4e9ee;
+        padding-top: 25px;
+        padding-left: 15px;
+
+
+        &__number {
+          padding-bottom: 15px;
+
+          span {
+            font-size: 16px;
+            color: #a3afc0;
+          }
+        }
+
+        &__card-input {
+          width: 65px;
+          height: 40px;
+          outline:none;
+          border: 1px solid #e4e9ee;
+          margin-right: 5px;
+          text-align: center;
+          font-size: 16px;
+          color: #bec6cf;
+        }
+      }
+    }
+
+    &__time {
+      span {
+        font-size: 16px;
+        color: #a3afc0;
+      }
+
+      &__select-wrapper {
+        width: 70px;
+        position: relative;
+        height: 40px;
+
+        select {
+          padding: 10px;
+          width: inherit;
+          height: inherit;
+          background: none;
+          appearance: none;
+          z-index: 1;
+          border: 1px solid #e4e9ee;
+          font-size: 16px;
+          border-radius: 0px;
+        }
+      }
+      &__select-wrapper:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background-image: ;
+      }
+    }
   }
-
-
 }
+.black-dark-text {
+  color: #808592;
+}
+
