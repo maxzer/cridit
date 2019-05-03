@@ -133,6 +133,9 @@ ul, li {
         border: 1px solid #e4e9ee;
         padding-top: 25px;
         padding-left: 15px;
+        position: relative;
+        z-index: 1;
+        background-color: #f7f8f8;
 
 
         &__number {
@@ -155,18 +158,51 @@ ul, li {
           color: #bec6cf;
         }
       }
+
+      .bank-back {
+        width: 350px;
+        height: 235px;
+        border-radius: 10px;
+        border: 1px solid #e4e9ee;
+        padding-top: 25px;
+        padding-left: 15px;
+        position: absolute;
+        margin-top: -210px;
+        margin-left: 210px;
+
+      }
+
+      &__name {
+        width: 320px;
+        height: 40px;
+        background-color: white;
+        outline: none;
+        border: 1px solid #e4e9ee;
+        font-size: 16px;
+        color: #cfd5dc;
+        padding-left: 10px;
+      }
+
     }
 
     &__time {
+
+      &__container {
+        display: flex;
+        padding-bottom: 10px;
+      }
+
       span {
         font-size: 16px;
         color: #a3afc0;
       }
 
-      &__select-wrapper {
+      &__select-month {
         width: 70px;
         position: relative;
         height: 40px;
+        margin-right: 10px;
+        background-color: white;
 
         select {
           padding: 10px;
@@ -178,15 +214,57 @@ ul, li {
           border: 1px solid #e4e9ee;
           font-size: 16px;
           border-radius: 0px;
+          outline: none;
+
         }
       }
-      &__select-wrapper:after {
+
+      &__select-month:after {
         content: "";
         display: block;
         position: absolute;
         z-index: 1;
-        background-image: ;
+        background-image: url('../img/image.svg');
+        width: 16px;
+        height: 8px;
+        top: 16px;
+        right: 10px;
+        pointer-events: none;
       }
+
+      &__select-year {
+        width: 85px;
+        position: relative;
+        height: 40px;
+        background-color: white;
+
+        select {
+          padding: 10px;
+          width: inherit;
+          height: inherit;
+          background: none;
+          appearance: none;
+          z-index: 1;
+          border: 1px solid #e4e9ee;
+          font-size: 16px;
+          border-radius: 0px;
+          outline: none;
+        }
+      }
+
+      &__select-year:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background-image: url('../img/image.svg');
+        width: 16px;
+        height: 8px;
+        top: 16px;
+        right: 10px;
+        pointer-events: none;
+      }
+
     }
   }
 }
