@@ -43,55 +43,54 @@ ul, li {
   padding: 0;
 }
 
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
+.container{
+  display: flex;
+  max-width: 1200px;
+  min-height: 991px;
+  background-color: #101114;
+  margin: auto;
+  justify-content: center;
+  padding-top: 80px;
 }
 
 .wrapper {
+  height: 830px;
+  width: 960px;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0 auto;
-}
 
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  &__left-menu {
+    background-color: green;
+    width: 33%;
+    height: 375px;
 
-.container {
-  width: 100%;
-  flex: 0 0 auto;
-  position: relative;
-  max-width: $desktopWidth;
-  margin: 0 auto;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
+    &__list {
+      background-color: red;
+    }
+    &__item {
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      height: 75px;
+      line-height: 4;
+      padding-left: 30px;
+      border-bottom: 1px solid #20232b;
+      cursor: pointer;
+
+      &_dark{
+        background-color: #1f2229;
+      }
+
+      &_black-dark {
+        background-color: #191c24;
+      }
+    }
   }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
-}
 
-@import "modules/wrapper.scss";
+  &__card {
+    background-color: #f7f8f8;
+    height: 100%;
+    width: 67%;
+  }
 
-h1{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: $danger-color;
+
 }
