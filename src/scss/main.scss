@@ -61,6 +61,7 @@ ul, li {
   &__left-menu {
     width: 33%;
     height: 375px;
+    margin-right: 1px;
 
     &__list {
     }
@@ -93,9 +94,15 @@ ul, li {
     height: 100%;
     width: 67%;
     padding-top: 45px;
+    border-top: 1px solid #e8e9e9;
+    border-bottom: 1px solid #272b30;
+
+    &__container {
+
+    padding-bottom: 40px;
     padding-left: 30px;
 
-    &__info {
+      &__info {
       display: flex;
       flex-direction: column;
 
@@ -108,17 +115,19 @@ ul, li {
         .number-card {
           margin: 0px;
           padding-left: 60px;
+          color: black;
         }
 
         .cash {
           margin: 0px;
           padding-left: 35px;
+          color: black;
         }
 
       }
     }
 
-    &__card-data {
+      &__card-data {
 
       h1 {
         font-size: 22px;
@@ -170,6 +179,51 @@ ul, li {
         margin-top: -210px;
         margin-left: 210px;
 
+        &__line {
+          width: 100%;
+          height: 40px;
+          background-color: #e4e9ee;
+          margin-bottom: 20px;
+        }
+
+        &__cvv {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 24px;
+
+          span {
+            font-size: 16px;
+            color: #8494ab;
+          }
+        }
+
+        &__pass-code {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 15px;
+
+          input {
+            width: 140px;
+            height: 40px;
+            border: 1px solid #e4e9ee;
+            outline: none;
+            font-size: 16px;
+            color: #bec6cf;
+            padding-left: 20px;
+          }
+        }
+
+        &__pass-code:after {
+          content: '';
+          background-image: url("../img/answer.png");
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 112px;
+          right: 25px;
+
+        }
+
       }
 
       &__name {
@@ -182,10 +236,9 @@ ul, li {
         color: #cfd5dc;
         padding-left: 10px;
       }
-
     }
 
-    &__time {
+      &__time {
 
       &__container {
         display: flex;
@@ -266,7 +319,44 @@ ul, li {
       }
 
     }
+
+      &__send {
+      width: 135px ;
+      height: 40px ;
+      background-color: #0058ba;
+      border-radius: 20px;
+      outline: none;
+      color: white;
+      margin-top: 40px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    }
+
+    &__agreement {
+      font-size: 12px;
+      color: #89909d;
+      background-color: #373c43;
+      padding-left: 30px;
+      padding-top: 30px;
+      padding-right: 40px;
+      padding-bottom: 17px;
+
+      &__text {
+
+      }
+
+
+
+      p {
+        margin: 0px;
+        padding-bottom: 10px;
+      }
+
+    }
   }
+
+
 }
 .black-dark-text {
   color: #808592;
