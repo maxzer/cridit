@@ -171,6 +171,10 @@ ul, li {
           text-align: center;
           font-size: 16px;
           color: #bec6cf;
+
+          &.error {
+            border: 1px solid red;
+          }
         }
       }
 
@@ -216,6 +220,10 @@ ul, li {
             font-size: 16px;
             color: #bec6cf;
             padding-left: 20px;
+
+            &.error {
+              border: 1px solid red;
+            }
           }
         }
 
