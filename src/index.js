@@ -5,15 +5,9 @@ import './js/'
 import './scss/main.scss'
 // CSS (example)
 import './css/main.css'
+// Jquery
+import 'jquery'
 
-// Bootstrap (example)
-// import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'popper.js'
 
-// import 'vue'
-// import Vue from 'vue'
-
-//* Without vuex and store
-// const app = new Vue({
-//   el: '#app'
-// })
+import 'jquery-validation'
