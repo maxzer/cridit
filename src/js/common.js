@@ -34,12 +34,10 @@ $('.js-send').click(function () {
           $(cardName).removeClass('error')
        }
 
-       let number = $('.js-card-input').hasClass('error');
-       let code = $('.js-pass-code').hasClass('error');
-       let name = $(cardName).hasClass('error');
-       if (number || code || name) {
-           alert('нет')
+       let hasErrors = $('.js-card-input').hasClass('error') || $('.js-pass-code').hasClass('error') || $(cardName).hasClass('error');
+       if (hasErrors) {
+           alert('В форме ошибки')
        } else {
-           alert('отправлено ')
+           alert('Форма отправленна')
        }
 });
