@@ -249,7 +249,15 @@ ul, li {
         font-size: 16px;
         color: #cfd5dc;
         padding-left: 10px;
+
+        &.error {
+          border: 1px solid red;
+        }
       }
+
+        &__name:focus::placeholder {
+          color:transparent;
+        }
     }
 
       &__time {
