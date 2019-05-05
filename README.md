@@ -1,3 +1,3 @@
 # cridit
 
-тест 
+установка npm intstall
