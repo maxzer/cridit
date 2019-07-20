@@ -8,6 +8,4 @@ import './css/main.css'
 // Jquery
 import 'jquery'
 
-import 'popper.js'
-
 import 'jquery-validation'

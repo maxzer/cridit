@@ -3,29 +3,34 @@ $('.js-left-menu').click(function () {
     $(this).addClass('active');
 });
 
-$('.js-send').click(function () {
+let numberCard = function () {
 
     $('.js-card-input').each(function () {
         let number = $(this).val().length;
-        if (number < 4){
+        if (number < 4) {
             $(this).addClass('error');
 
         } else {
             $(this).removeClass('error');
         }
     });
+};
+
+let cvvCode = function() {
 
     $('.js-pass-code').each(function () {
         let number = $(this).val().length;
 
-        if (number < 3){
+        if (number < 3) {
             $(this).addClass('error')
         } else {
             $(this).removeClass('error')
         }
 
     });
+};
 
+let cardOwner = function () {
     let cardName = $('.js-name');
     var regexp = /^[a-z\s]+$/i;
        if(!regexp.test($(cardName).val()) || $(cardName).val().length < 4) {
@@ -40,4 +45,11 @@ $('.js-send').click(function () {
        } else {
            alert('Форма отправленна')
        }
+};
+
+$('.js-send').click(function () {
+    numberCard();
+    cvvCode();
+    cardOwner();
+    return false;
 });
