@@ -8,33 +8,33 @@
 </head>
 <body>
   <section class="container">
-    <div class="wrapper">
-      <div class="wrapper__left-menu">
-        <ul class="wrapper__left-menu__list">
-            <li class="wrapper__left-menu__item wrapper__left-menu__item_dark js-left-menu" >Личный кабинет</li>
-            <li class="wrapper__left-menu__item wrapper__left-menu__item_dark js-left-menu">Платежи (активная)</li>
-            <li class="wrapper__left-menu__item wrapper__left-menu__item_dark js-left-menu">История платежей</li>
-            <li class="wrapper__left-menu__item wrapper__left-menu__item_black-dark js-left-menu">Настройки</li>
-            <li class="wrapper__left-menu__item wrapper__left-menu__item_black-dark black-dark-text js-left-menu">Выйти</li>
+    <div class="menu">
+      <div class="menu__left">
+        <ul class="menu__list">
+            <li class="menu__item js-left-menu">Личный кабинет</li>
+            <li class="menu__item js-left-menu">Платежи (активная)</li>
+            <li class="menu__item js-left-menu">История платежей</li>
+            <li class="menu__item js-left-menu">Настройки</li>
+            <li class="menu__item js-left-menu">Выйти</li>
         </ul>
       </div>
-      <div class="wrapper__card">
-        <div class="wrapper__card__container">
-          <div class="wrapper__card__container__info">
-            <span class="wrapper__card__container__info__text">Информация по оплате:</span>
-            <span class="wrapper__card__container__info__text">Номер счета:<p class="number-card">87123658716587</p></span>
-            <span class="wrapper__card__container__info__text">Сумма платежа:<p class="cash">100 руб.</p></span>
+      <div class="menu__card">
+        <div class="menu__wrapper">
+          <div class="menu__info">
+            <span class="menu__text">Информация по оплате:</span>
+            <span class="menu__text">Номер счета:<p class="number-card">87123658716587</p></span>
+            <span class="menu__text">Сумма платежа:<p class="cash">100 руб.</p></span>
           </div>
-          <div class="wrapper__card__container__card-data">
+          <form class="menu__card-data">
             <h1>Данные банковской карты</h1>
-            <div class="wrapper__card__container__card-data bank-front">
-              <div class="bank-front__number">
+            <div class="menu__bank-front">
+              <div class="menu__number">
                 <span>Номер карты</span>
-                <div class="bank-front__number-card">
-                  <input type="text" class="bank-front__card-input js-card-input" maxlength="4">
-                  <input type="text" class="bank-front__card-input js-card-input" maxlength="4">
-                  <input type="text" class="bank-front__card-input js-card-input" maxlength="4">
-                  <input type="text" class="bank-front__card-input js-card-input" maxlength="4">
+                <div class="number-card">
+                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
+                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
+                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
+                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
               </div>
               </div>
               <div class="wrapper__card__container__time">
@@ -78,7 +78,7 @@
                 <input class="js-pass-code" type="text" maxlength="3">
               </div>
             </div>
-          </div>
+          </form>
           <button class="wrapper__card__container__send js-send">Оплатить</button>
         </div>
         <div class="wrapper__card__agreement">
