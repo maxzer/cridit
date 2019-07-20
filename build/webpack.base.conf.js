@@ -2,7 +2,6 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
 const webpack = require('webpack')
 
 const PATHS = {
@@ -29,15 +28,8 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: '/node_modules/'
-    }, {
-      test: /\.vue$/,
-      loader: 'vue-loader',
-      options: {
-        loader: {
-          scss: 'vue-style-loader!css-loader!sass-loader'
-        }
-      }
-    }, {
+    },
+      {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
@@ -53,7 +45,7 @@ module.exports = {
           options: { sourceMap: true }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+          options: { sourceMap: true, config: { path: `build/postcss.config.js` } }
         }, {
           loader: 'sass-loader',
           options: { sourceMap: true }
@@ -69,18 +61,12 @@ module.exports = {
           options: { sourceMap: true }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+          options: { sourceMap: true, config: { path: `build/postcss.config.js` } }
         }
       ]
     }]
   },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.js',
-    }
-  },
   plugins: [
-    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
     }),
