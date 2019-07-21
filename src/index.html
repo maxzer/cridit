@@ -8,8 +8,8 @@
 </head>
 <body>
   <section class="container">
-    <div class="menu">
-      <div class="menu__left">
+    <div class="wrapper">
+      <div class="menu">
         <ul class="menu__list">
             <li class="menu__item js-left-menu">Личный кабинет</li>
             <li class="menu__item js-left-menu">Платежи (активная)</li>
@@ -18,29 +18,29 @@
             <li class="menu__item js-left-menu">Выйти</li>
         </ul>
       </div>
-      <div class="menu__card">
-        <div class="menu__wrapper">
-          <div class="menu__info">
-            <span class="menu__text">Информация по оплате:</span>
-            <span class="menu__text">Номер счета:<p class="number-card">87123658716587</p></span>
-            <span class="menu__text">Сумма платежа:<p class="cash">100 руб.</p></span>
+      <div class="card">
+        <div class="card__wrapper">
+          <div class="card__info">
+            <span class="card__text">Информация по оплате:</span>
+            <span class="card__text">Номер счета:<p class="number-card">87123658716587</p></span>
+            <span class="card__text">Сумма платежа:<p class="cash">100 руб.</p></span>
           </div>
-          <form class="menu__card-data">
+          <form class="card__data" action="/payment.php" method="post">
             <h1>Данные банковской карты</h1>
-            <div class="menu__bank-front">
-              <div class="menu__number">
+            <div class="card__bank-front">
+              <div class="card__number">
                 <span>Номер карты</span>
                 <div class="number-card">
-                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
-                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
-                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
-                  <input type="text" class="menu__card-input js-card-input" maxlength="4">
+                  <input type="text" class="card__input js-card-input" maxlength="4" name="cardnumber-1">
+                  <input type="text" class="card__input js-card-input" maxlength="4" name="cardnumber-1">
+                  <input type="text" class="card__input js-card-input" maxlength="4" name="cardnumber-1">
+                  <input type="text" class="card__input js-card-input" maxlength="4" name="cardnumber-1">
               </div>
               </div>
-              <div class="menu__time">
+              <div class="card__time">
                 <span>Cрок действия</span>
-                <div class="wrapper">
-                 <div class="wrapper__select-month">
+                <div class="card__validity">
+                 <div class="card__select-month">
                   <select>
                     <option>01</option>
                     <option>02</option>
@@ -56,7 +56,7 @@
                     <option>12</option>
                   </select>
                 </div>
-                 <div class="wrapper__select-year">
+                 <div class="card__select-year">
                   <select>
                     <option>2019</option>
                     <option>2020</option>
@@ -66,22 +66,22 @@
                   </select>
                 </div>
                 </div>
-                <input type="text" placeholder="Держатель карты" class="menu__name js-name" maxlength="16">
+                <input type="text" placeholder="Держатель карты" class="card__name js-name" maxlength="16" name="holder">
               </div>
               </div>
-            <div class="menu__bank-back">
-              <div class="menu__line"></div>
-              <div class="menu__cvv">
+            <div class="card__bank-back">
+              <div class="card__line"></div>
+              <div class="card__cvv">
                 <span>Код CVV2 / CVC2</span>
               </div>
-              <div class="menu__pass-code">
-                <input class="js-pass-code" type="text" maxlength="3">
+              <div class="card__pass-code">
+                <input class="js-pass-code" type="text" maxlength="3" name="pass-code">
               </div>
             </div>
-            <input type="submit" value="Оплатить" class="menu__send js-send">
+            <input type="submit" value="Оплатить" class="card__send js-send">
           </form>
         </div>
-        <div class="menu__agreement">
+        <div class="card__agreement">
           <div>
             <span><p>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится
               ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>

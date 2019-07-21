@@ -1,8 +1,3 @@
-$('.js-left-menu').click(function () {
-    $('.js-left-menu').removeClass('active');
-    $(this).addClass('active');
-});
-
 let numberCard = function () {
 
     $('.js-card-input').each(function () {
@@ -47,9 +42,14 @@ let cardOwner = function () {
        }
 };
 
-$('.js-send').click(function () {
+$('.js-left-menu').click(function () {
+    $('.js-left-menu').removeClass('active');
+    $(this).addClass('active');
+});
+
+$('.js-send').click(function (e) {
+    e.preventDefault();
     numberCard();
     cvvCode();
     cardOwner();
-    return false;
 });

@@ -11,9 +11,13 @@ body {
   padding: 0;
 }
 
-*, *:before, *:after { box-sizing: border-box; }
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
-h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
 
 
 ul, li {
@@ -22,7 +26,7 @@ ul, li {
   padding: 0;
 }
 
-.container{
+.container {
   display: flex;
   min-height: 991px;
   background-color: #101114;
@@ -31,16 +35,17 @@ ul, li {
   padding-top: 80px;
 }
 
-.menu {
+.wrapper {
   height: 100%;
   width: 960px;
   display: flex;
+}
 
-  &__left {
-    width: 33%;
-    height: 375px;
-    margin-right: 2px;
-  }
+.menu {
+  width: 33%;
+  height: 375px;
+  margin-right: 2px;
+
 
   &__item {
     color: white;
@@ -67,15 +72,16 @@ ul, li {
     background-color: #2a2d37;
     color: #808592;
   }
+}
 
-  &__card {
-    background-color: #f7f8f8;
-    height: 100%;
-    width: 67%;
-    padding-top: 45px;
-    border-top: 1px solid #e8e9e9;
-    border-bottom: 1px solid #272b30;
-  }
+.card {
+  background-color: #f7f8f8;
+  height: 100%;
+  width: 67%;
+  padding-top: 45px;
+  border-top: 1px solid #e8e9e9;
+  border-bottom: 1px solid #272b30;
+
 
   &__wrapper {
     padding-bottom: 40px;
@@ -106,7 +112,7 @@ ul, li {
     }
   }
 
-  &__card-data {
+  &__data {
 
     h1 {
       font-size: 22px;
@@ -136,7 +142,7 @@ ul, li {
     }
   }
 
-  &__card-input {
+  &__input {
     width: 65px;
     height: 40px;
     outline: none;
@@ -151,88 +157,84 @@ ul, li {
     }
   }
 
+  &__validity {
+    display: flex;
+    padding-bottom: 10px;
 
-  &__time {
+    span {
+      font-size: 16px;
+      color: #a3afc0;
+    }
+  }
 
-    .wrapper {
-      display: flex;
-      padding-bottom: 10px;
+  &__select-month {
+    width: 70px;
+    position: relative;
+    height: 40px;
+    margin-right: 10px;
+    background-color: white;
 
-      span {
-        font-size: 16px;
-        color: #a3afc0;
-      }
-
-      &__select-month {
-        width: 70px;
-        position: relative;
-        height: 40px;
-        margin-right: 10px;
-        background-color: white;
-
-        select {
-          padding: 10px;
-          width: inherit;
-          height: inherit;
-          background: none;
-          appearance: none;
-          z-index: 1;
-          border: 1px solid #e4e9ee;
-          font-size: 16px;
-          border-radius: 0px;
-          outline: none;
-
-        }
-      }
-
-      &__select-month:after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 1;
-        background-image: url('../img/image.svg');
-        width: 16px;
-        height: 8px;
-        top: 16px;
-        right: 10px;
-        pointer-events: none;
-      }
-
-      &__select-year {
-        width: 85px;
-        position: relative;
-        height: 40px;
-        background-color: white;
-
-        select {
-          padding: 10px;
-          width: inherit;
-          height: inherit;
-          background: none;
-          appearance: none;
-          z-index: 1;
-          border: 1px solid #e4e9ee;
-          font-size: 16px;
-          border-radius: 0px;
-          outline: none;
-        }
-      }
-
-      &__select-year:after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 1;
-        background-image: url('../img/image.svg');
-        width: 16px;
-        height: 8px;
-        top: 16px;
-        right: 10px;
-        pointer-events: none;
-      }
+    select {
+      padding: 10px;
+      width: inherit;
+      height: inherit;
+      background: none;
+      appearance: none;
+      z-index: 1;
+      border: 1px solid #e4e9ee;
+      font-size: 16px;
+      border-radius: 0px;
+      outline: none;
 
     }
   }
+
+  &__select-month:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-image: url('../img/image.svg');
+    width: 16px;
+    height: 8px;
+    top: 16px;
+    right: 10px;
+    pointer-events: none;
+  }
+
+  &__select-year {
+    width: 85px;
+    position: relative;
+    height: 40px;
+    background-color: white;
+
+    select {
+      padding: 10px;
+      width: inherit;
+      height: inherit;
+      background: none;
+      appearance: none;
+      z-index: 1;
+      border: 1px solid #e4e9ee;
+      font-size: 16px;
+      border-radius: 0px;
+      outline: none;
+    }
+  }
+
+  &__select-year:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-image: url('../img/image.svg');
+    width: 16px;
+    height: 8px;
+    top: 16px;
+    right: 10px;
+    pointer-events: none;
+  }
+
 
   &__name {
     width: 320px;
@@ -304,6 +306,7 @@ ul, li {
     }
   }
 
+
   &__pass-code:after {
     content: '';
     background-image: url("../img/answer.png");
@@ -347,9 +350,8 @@ ul, li {
   }
 }
 
-
 @media screen and (max-width: $smDesktopWidth) {
-  .menu {
+  .card {
     &__bank-back {
       width: 350px;
       height: 235px;
@@ -364,32 +366,34 @@ ul, li {
   }
 }
 
-@media screen and (max-width: $tableWidth){
+@media screen and (max-width: $tableWidth) {
 
   .container {
     padding-top: 0px;
   }
 
-  .menu {
+  .wrapper {
     flex-direction: column;
+  }
+
+
+  .card {
+    width: 100%;
 
     &__wrapper {
       padding-left: 10px;
     }
+  }
+  .menu {
+
+    width: 100%;
+    text-align: center;
+
     &__item {
       padding: 0px;
     }
 
-    &__left {
-      width: 100%;
-      text-align: center;
-    }
-
-    &__card {
-      width: 100%;
-    }
   }
-
 }
 
 
